@@ -1,13 +1,66 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <title>Список дел</title>
+    <link href="style.css" rel="stylesheet" type="text/css" media="screen, projection"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 </head>
-<body>
-    <h1>hello</h1>
-    <script src="script.js"></script>
+<body>    
+   <h1>Список дел</h1>
+   <h2>Новая задача</h2>
+   <input type="text" name="task" id="newTask">
+   <input type="button" value="Сохранить" class="btn " id="saveTask"> <br><br>
+   <div id="contanerBtn">
+   <input type="button" value="Активные" class="btn generalBTN" id="activ" onclick="switchToActiv()">
+   <input type="button" value="Завершенные" class="btn generalBTN" id="endT" onclick="switchToComplit()">
+   <input type="button" value="Удаленные" class="btn generalBTN" id="delT" onclick="switchToDelet()">
+   <input type="button" value="Скрыть все" class="btn generalBTN" id="hide" onclick="switchToMain()">
+   </div>
+   
+   <div id="aktivList" class="listTask">
+     <h1>Активные</h1>
+     <div id="cotentActiv" class="contentTask">       
+     <div id="ulActiv" class="ulTask">
+       <ul id="ulActivTask">
+       </ul>
+     </div>
+     <div id="btnActiv">
+       <button   id="complTas" class="btn"><i class="fa fa-check" aria-hidden="true"></i></button>
+       <button  id="delTask" class="btn"><i class="fa fa-trash" aria-hidden="true"></i></button>
+     </div>
+     <button  class="btn bottBtn" id="delAllActive">Удалить все</button>
+   </div>
+     </div>
+     
+   <div id="endList" class="listTask">  
+     <h1>Завершенные</h1>
+     <div id="cotentComplited" class="contentTask">       
+      <div id="ulComplited" class="ulTask">
+        <ul id="ulComplTask">
+        </ul>
+      </div>
+      <div id="btnComplited">
+        <button  id="delTaskCompl" class="btn"><i class="fa fa-trash" aria-hidden="true"></i></button>
+      </div>
+      <button  class="btn bottBtn" id="delAllComplited">Удалить все</button>
+    </div>
+    </div>
+   <div id="deletList" class="listTask"> 
+    <h1>Удаленные</h1>
+    <div id="cotentDelete" class="contentTask">       
+      <div id="ulDeleted" class="ulTask">
+        <ul id="ulDelTask">
+        </ul>
+      </div>
+      <div id="btnDeleted">
+        <button  class="btn" id="delButt">Восстановить</button>        
+      </div>
+      <button  class="btn bottBtn" id="delAll">Удалить все</button>
+    </div>
+   </div>
+   
+  <script src="script.js"></script>
 </body>
 </html>

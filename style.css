@@ -1,0 +1,40 @@
+body{background-image: url('./image/fon_pyatna_svetlyy_tekstura_50630_1920x1080.jpg');
+    color: black; }
+   body h1, h2{text-align: center;}
+   #aktiv, #end, #delet {border: solid 1px black;
+     height: auto;
+     width: 50%;}
+   #newTask{width: 80%;
+     height: 2em;
+     border-radius: 20px 20px 20px 20px;
+     background-color: aliceblue; }
+   .btn{border-radius: 20px 20px 20px 20px ;
+     width: 10em;
+     height: 2.5em;
+     background-color: aliceblue;}
+   .btn:hover{background: transparent;
+    color: aliceblue;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;}
+   .bottBtn{position: absolute; bottom: 2%; right: 2%;}
+   .btn:active{background-color: rgb(239, 97, 237);
+    color: black;
+    border: solid 2px black;}
+   .contentTask{display: flex;
+    flex-direction: row; 
+    margin: 2%;
+    justify-content: space-around;}
+   .ulTask{width: 80%; 
+    font-size: 1.3em;}
+   #contanerBtn{width: 100%;
+     text-align: center;}
+   li{list-style: none;
+     font-size: 1em;
+     cursor: pointer;}
+   .fa-circle-o, .fa-check-square-o, .fa-check{color: green;}
+   .fa-trash, .fa-ban{color: red;}
+   #btnActiv, #btnComplited, #btnDeleted{visibility: hidden;}
+   li:hover, li:active{color: red;transition: color 0s;}
+   .active{border: solid 1px red;}
+   
